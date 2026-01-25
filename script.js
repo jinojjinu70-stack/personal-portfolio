@@ -12,25 +12,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form submission handler (Mock)
+    // Form submission handler
     const contactForm = document.querySelector('.contact-form');
+    const iframe = document.getElementById('hidden_iframe');
+
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = contactForm.querySelector('.submit-btn');
-            const originalText = btn.textContent;
-
-            btn.textContent = 'Message Sent!';
-            btn.style.backgroundColor = '#28a745';
-
-            contactForm.reset();
-
+        contactForm.addEventListener('submit', () => {
+            // Show popup immediately after submit (assuming success)
+            // We can't easily detect failure with a cross-origin form post to Google
             setTimeout(() => {
-                btn.textContent = originalText;
-                btn.style.backgroundColor = '';
-            }, 3000);
+                contactForm.reset();
+                document.getElementById('success-modal').classList.add('show');
+            }, 500);
         });
     }
+
+    window.closePopup = function () {
+        document.getElementById('success-modal').classList.remove('show');
+    };
 
     // Optional: Add scroll animation class
     const observer = new IntersectionObserver((entries) => {

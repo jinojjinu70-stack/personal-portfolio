@@ -23,6 +23,7 @@
                     <li><a href="#education">Education</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -168,8 +169,8 @@
                     <div class="project-image">
                         <img src="assets/project_diet_1.png" alt="Fat Loss & Bulking Diet Plan App">
                         <div class="project-overlay">
-                            <a href="file:///C:/Users/Manoj%20M/Documents/fat%20loss%20and%20bulking%20diet%20plan/index.html"
-                                class="btn btn-primary btn-sm" target="_blank">View Project</a>
+                            <a href="https://fat-loss-and-bulking-diet-plan.vercel.app/" class="btn btn-primary btn-sm"
+                                target="_blank">View Project</a>
                         </div>
                     </div>
                     <div class="project-info">
@@ -186,9 +187,31 @@
                             <li>UI/UX Design</li>
                             <li>Interactive Forms</li>
                         </ul>
+                        <div style="margin-top: 20px;">
+                            <a href="https://fat-loss-and-bulking-diet-plan.vercel.app/"
+                                class="btn btn-secondary btn-sm" target="_blank">View Project</a>
+                        </div>
                     </div>
                 </div>
                 <!-- Additional placeholder cards can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <h2 class="section-title">Latest from the Blog</h2>
+            <div class="project-card active-project">
+                <div class="project-info">
+                    <h3>How to Study Smart, Not Hard</h3>
+                    <p class="project-desc">
+                        Discover effective study techniques that can help you learn more in less time.
+                        This article explores actionable strategies to improve retention and productivity.
+                    </p>
+                    <a href="https://jinojmcsda2024.blogspot.com/2025/12/how-to-study-smartnot-hard.html"
+                        class="btn btn-primary btn-sm" target="_blank">Read Blog</a>
+                </div>
             </div>
         </div>
     </section>
@@ -215,24 +238,39 @@
                     </div>
                 </div>
                 <div class="contact-form-container">
-                    <form class="contact-form">
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+                    <form class="contact-form"
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc8WsNrbrHzff-tQQwN0X__z4vvIePyeGswiT_-c7lFA3r1sw/formResponse"
+                        method="POST" target="hidden_iframe">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" required>
+                            <input type="text" id="name" name="entry.1397422037" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" required>
+                            <input type="email" id="email" name="entry.459015964" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" required></textarea>
+                            <textarea id="message" name="entry.193045399" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="popup-overlay">
+        <div class="popup-content">
+            <h3>Thank You!</h3>
+            <p>Your message has been sent successfully. I will get back to you soon.</p>
+            <button class="btn btn-primary" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    </div>
+    </div>
     </section>
 
     <footer>
